@@ -48,7 +48,7 @@ while day < 1:
     if weather_id > 622:
         print("No extreme weather conditions tomorrow.")
 
-def get_number():
+def send_message():
     uk_number = f"+44{text_box.get("1.0", END)}"
 
     if will_rain:
@@ -99,15 +99,9 @@ text_label.grid(row=1, column=1)
 text_box = Text(height=1, width=20)
 text_box.grid(row=2, column=1)
 
-submit_button = Button(command=get_number, text="Submit", font=(FONT_NAME, 8 , "bold"))
+submit_button = Button(command=send_message, text="Submit", font=(FONT_NAME, 8 , "bold"))
 submit_button.grid(row=3, column=1)
 
 
 
 window.mainloop()
-
-
-
-
-
-
